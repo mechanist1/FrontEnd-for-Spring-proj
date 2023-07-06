@@ -25,6 +25,9 @@ export class UsersComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
+  this.genrate();}
+
+    genrate():void{
     this.http.get<Registration[]>('http://localhost:8080/Users')
       .subscribe(
         response => {
@@ -37,9 +40,11 @@ export class UsersComponent implements OnInit {
       );
   }
     deleteUser(userId: number) {
-      this.http.delete(`http://localhost:8080/users/${userId}`).subscribe(
+    console.log("deleting button works");
+      this.http.delete(`http://localhost:8080/Users/${userId}`).subscribe(
         () => {
           console.log('User deleted successfully');
+          this.genrate();
           // Perform any additional actions after successful deletion
         },
         (error) => {

@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'signin-home',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.css']
 })
-export class HomeComponent implements OnInit {
+export class SigninComponent implements OnInit {
  firstname: string = "";
  lastname: string = "";
  department: string = "";
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  go(): void {
+  signin(): void {
 
     const data = {
       firstname: this.firstname,

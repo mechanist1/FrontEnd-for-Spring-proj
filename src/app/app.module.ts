@@ -8,6 +8,8 @@ import { ApiTestingComponent } from './api-testing/api-testing.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { UsersComponent } from './users/users.component';
     AppComponent,
     ApiTestingComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
