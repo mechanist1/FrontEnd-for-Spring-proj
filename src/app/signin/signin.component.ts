@@ -9,16 +9,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
- firstname: string = "";
- lastname: string = "";
- department: string = "";
- username: string = "";
- password: string = "";
- passwordagain: string = "";
- email: string = "";
- contact: string = "";
 
- test:string="";
+
+ email: string = "";
+
+ password: string = "";
+
+
+
+
 
   constructor(private router: Router, private http: HttpClient) { }
 
@@ -26,24 +25,20 @@ export class SigninComponent implements OnInit {
 
   signin(): void {
 
-    const data = {
-      firstname: this.firstname,
-      lastname: this.lastname,
-      department: this.department,
-      username: this.username,
+    const data2 = {
+
       password: this.password,
-      passwordagain: this.passwordagain,
-      email: this.email,
-      contact: this.contact
-    };
+
+      email: this.email,}
 
 
 
-    this.http.post('http://localhost:8080/Registration',data, { responseType: 'text' })
+
+    this.http.post('http://localhost:8080/Registration',data2, { responseType: 'text' })
       .subscribe(
         response => {
 
-          console.log("the Firstname  is: ",response);
+          console.log(response);
         },
         error => {
           console.log(error);
