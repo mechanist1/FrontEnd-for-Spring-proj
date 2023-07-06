@@ -34,7 +34,7 @@ export class SigninComponent implements OnInit {
 
 
 
-    this.http.post('http://localhost:8080/Registration',data2, { responseType: 'text' })
+    this.http.post('http://localhost:8080/signin',data2, { responseType: 'text' })
       .subscribe(
         response => {
 
